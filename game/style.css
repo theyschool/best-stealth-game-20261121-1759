@@ -1,0 +1,26 @@
+/* MOONSHIFT page chrome: the game itself is drawn entirely on the canvas; this sheet only
+   centres it on a near-black backdrop and keeps the screen-reader status line invisible. */
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #07090f;
+}
+#game {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(100vw, 160vh);
+  height: min(100vh, 62.5vw);
+  display: block;
+  background: #10141f;
+}
+/* Read aloud, never shown: the status line screen readers announce. */
+#status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
